@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,*:after {
+    box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+	margin: 0;
+    color: #0f0f0f;
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: 'Muli', Arial,"Helvetica Neue",Helvetica,sans-serif;
+    min-width: 320px;
+}
+
+a {
+    color: #3e64ff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #000;
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+.main-nav {
+	float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.main-nav li {
+	float: left;
+}
+
+.logo {
+	width: 150px;
+	float: left;
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+	fill: currentColor;
+}
+
+.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 3;
+}
+
+.banner {
+	position: relative;
+	height: 100vh;
+}
+
+.banner .container {
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.banner:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 50%;
+	background: #ffeded;
+	z-index: -1;
+}
+
+.container {
+	max-width: 1350px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.bannerInfo {
+	text-transform: uppercase;
+	color: #ff4757;
+	font-weight: 900;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.bannerText {
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.bannerTitle {
+	font-size: 70px;
+	line-height: 1.5;
+	display: block;
+	font-weight: 900;
+}
+
+.personInfo {
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.personInfo span {
+	text-decoration: underline;
+	color: #ff4757;
+}
+
+.scrollDown {
+	width: 70px;
+	height: 70px;
+	bottom: 50px;
+	position: absolute;
+	left: 50%;
+	margin-left: -35px;
+	color: #ff4757;
+}
+
+.scrollDown:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: #ffeded;
+	transform: rotate(45deg);
+
+}
+
+.scrollDown svg {
+	display: inline-block;
+	z-index: 3;
+	width: 20px;
+	position: absolute;
+	left: 50%;
+	margin-left: -10px;
+	top: 10px;
+	animation: 1.6s ease infinite wheel-up-down;
+}
+
+@keyframes wheel-up-down {
+  100% {
+  	top: 40px;
+    opacity: 1;
+  }
+  30% {
+    opacity: 1; 
+  }
+  0% {
+  	top: 10px;
+    opacity: 0; 
+  } 
+}

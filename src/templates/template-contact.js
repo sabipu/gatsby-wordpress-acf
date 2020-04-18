@@ -8,15 +8,13 @@ import "../assets/main.css"
 class Homepage extends Component {
   render() {
     const typeEffect = ["Developer.", "Web Designer.", "Surfer.", "Husband.", "Skateboarder."];
-    const data = this.props.data.allWordpressPage.edges[0].node
-    
     return (
       <Layout>
         <div className="wrapper">
           <div className="banner">
             <div className="container">
               <div className="bannerText">
-                <span className="bannerInfo">{data.title}Hey, I am</span>
+                <span className="bannerInfo">Hey, I am yo man this is contact</span>
                 <span className="bannerTitle">Bipu Bajgai</span>
                 <div className="personInfo">I'm a <ReactTypingEffect speed={120} eraseDelay={1500} typingDelay={500} text={typeEffect} /></div>
               </div>
@@ -35,14 +33,23 @@ export default Homepage
 
 export const pageQuery = graphql`
   query {
-    allWordpressPage(filter: {path: {eq: "/"}}) {
+    allWordpressPage {
       edges {
         node {
           id
           title
           excerpt
           slug
-          date(formatString: "MMMM DD, YYYY")
+        }
+      }
+    }
+    allWordpressPost {
+      edges {
+        node {
+          title
+          excerpt
+          slug
+          path
         }
       }
     }
