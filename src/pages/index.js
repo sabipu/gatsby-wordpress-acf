@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import ReactTypingEffect from 'react-typing-effect'
 
 import Layout from '../components/Layout'
 import "../assets/main.css"
@@ -18,7 +17,6 @@ class Homepage extends Component {
               <div className="bannerText">
                 <span className="bannerInfo">{data.title}Hey, I am</span>
                 <span className="bannerTitle">Bipu Bajgai</span>
-                <div className="personInfo">I'm a <ReactTypingEffect speed={120} eraseDelay={1500} typingDelay={500} text={typeEffect} /></div>
               </div>
             </div>
             <div className="scrollDown">
