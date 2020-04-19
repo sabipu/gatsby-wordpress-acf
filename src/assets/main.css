@@ -78,6 +78,7 @@ h6 {
 
 .main-nav li {
 	float: left;
+	margin-left: 15px;
 }
 
 .logo {

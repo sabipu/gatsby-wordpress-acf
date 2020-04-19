@@ -13,10 +13,10 @@ class Blog extends Component {
         {data.allWordpressPost.edges.map(({ node }) => (
           <div key={node.slug}>
             <hr />
-            <Link to={node.slug}>
+            <Link to={"/blog/" + node.slug}>
               <h4>{node.title}</h4>
             </Link>
-            <p>{node.excerpt}</p>
+            <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
         ))}
       </>

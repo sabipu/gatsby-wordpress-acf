@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -22,9 +26,9 @@ module.exports = {
          * The base URL of the WordPress site without the trailingslash and the protocol. This is required.
          * Example : 'demo.wp-api.org' or 'www.example-site.com'
          */
-        baseUrl: "newbip.com",
+        baseUrl: process.env.API_URL,
         // The protocol. This can be http or https.
-        protocol: "http",
+        protocol: process.env.API_PROTOCOL,
         // The rest api route prefix that your WordPress site is using.
         // Sometimes this is modified by WordPress plugins.
         // If not set, it uses the default of "wp-json"
@@ -81,8 +85,8 @@ module.exports = {
         perPage: 100,
         // Search and Replace Urls across WordPress content.
         searchAndReplaceContentUrls: {
-          sourceUrl: "http://newbip.com",
-          replacementUrl: "http://localhost:8000",
+          sourceUrl: "https://wp.iamskater.com",
+          replacementUrl: "https://wp.iamskater.com",
         },
         // Set how many simultaneous requests are sent at once.
         concurrentRequests: 10,
@@ -95,6 +99,7 @@ module.exports = {
         // ` will either include or exclude routes ending in `comments` and
         // all routes that begin with `yoast` from fetch.
         // Whitelisted routes using glob patterns
+        // "**/users",
         includedRoutes: [
           "**/categories",
           "**/posts",
@@ -102,7 +107,6 @@ module.exports = {
           "**/media",
           "**/tags",
           "**/taxonomies",
-          "**/users",
           "**/menus"
         ],
         // Blacklisted routes using glob patterns

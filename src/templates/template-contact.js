@@ -6,7 +6,6 @@ import "../assets/main.css"
 
 class Homepage extends Component {
   render() {
-    const typeEffect = ["Developer.", "Web Designer.", "Surfer.", "Husband.", "Skateboarder."];
     return (
       <Layout>
         <div className="wrapper">
