@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import "../assets/main.css"
 
 class Homepage extends Component {
