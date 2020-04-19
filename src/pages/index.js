@@ -6,7 +6,6 @@ import "../assets/main.css"
 
 class Homepage extends Component {
   render() {
-    const typeEffect = ["Developer.", "Web Designer.", "Surfer.", "Husband.", "Skateboarder."];
     const data = this.props.data.allWordpressPage.edges[0].node
     
     return (
